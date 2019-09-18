@@ -1,2 +1,5 @@
 # code_review
-code review practice
+코드 리뷰 실습용 저장소
+
+## 목표
+* 예제 코드를 기반으로 코드리뷰 절차 실습

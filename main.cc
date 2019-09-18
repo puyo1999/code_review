@@ -1,8 +1,17 @@
 #include <iostream>
 #include <cstdlib>
+
 #include "priority_queue.h"
 
 using namespace std;
+inline bool IsValidCustomNumber( int customNumber );
+
+void IsValidCustomNumber( int customNumber ){
+	if(-500 < customNumber && customNumber < 2000){
+		return true;
+	}
+	return false;
+}
 
 template <typename T>
 void pushQueue(templatePriorityQueue<T>* Que, int data){
@@ -32,7 +41,7 @@ int main(int argc, char* argv[]){
 
 	if( argc > 1 ){
 		customNumber = atoi(argv[1]);
-		if( customNumber > -500 && customNumber < 2000 ){
+		if(IsValidCustomNumber(customNumber)){
 			pushQueue(&priQueue,customNumber);
 		}
 		else{
